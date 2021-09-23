@@ -17,7 +17,7 @@
 DEVICE_PATH := device/xiaomi/surya
 
 # Inherit from proprietary files
-include vendor/xiaomi/surya/BoardConfigVendor.mk
+include vendor/xiaomi/renoir/BoardConfigVendor.mk
 
 # Architecture
 TARGET_ARCH := arm64
@@ -38,7 +38,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := surya,karna
+TARGET_OTA_ASSERT_DEVICE := renoir
 
 # Audio
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
@@ -95,8 +95,8 @@ ODM_MANIFEST_SURYA_FILES := \
     $(DEVICE_PATH)/configs/hidl/manifest-qva.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_surya
-TARGET_RECOVERY_DEVICE_MODULES := libinit_surya
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_renoir
+TARGET_RECOVERY_DEVICE_MODULES := libinit_renoir
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
@@ -118,7 +118,7 @@ BOARD_MKBOOTIMG_ARGS := --header_version 2
 
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := surya_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
+TARGET_KERNEL_SOURCE := kernel/xiaomi/renoir
 
 # Media
 TARGET_USES_ION := true
