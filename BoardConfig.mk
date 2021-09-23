@@ -58,7 +58,7 @@ USE_CUSTOM_AUDIO_POLICY := 1
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := sm6150
+TARGET_BOOTLOADER_BOARD_NAME := sm7350
 TARGET_NO_BOOTLOADER := true
 
 # Camera
@@ -86,7 +86,7 @@ LOC_HIDL_VERSION := 4.0
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
-DEVICE_MANIFEST_FILE += hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest.xml
+DEVICE_MANIFEST_FILE += hardware/qcom-caf/sm7350/media/conf_files/sm7350/c2_manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 ODM_MANIFEST_FILES += $(DEVICE_PATH)/configs/hidl/manifest-qva.xml
 ODM_MANIFEST_SKUS += surya
@@ -117,7 +117,7 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_MKBOOTIMG_ARGS := --header_version 2
 
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := surya_defconfig
+TARGET_KERNEL_CONFIG := renoir_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/renoir
 
 # Media
@@ -154,7 +154,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
-TARGET_BOARD_PLATFORM := sm6150
+TARGET_BOARD_PLATFORM := sm7350
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
